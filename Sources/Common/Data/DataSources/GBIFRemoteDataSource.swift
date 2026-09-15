@@ -48,10 +48,7 @@ final class DefaultGBIFRemoteDataSource: GBIFRemoteDataSource {
             baseURL: base(),
             path: "/v1/occurrence/search",
             queryItems: [
-                URLQueryItem(
-                    name: "geoDistance",
-                    value: "\(latitude),\(longitude),\(radiusKm)km"
-                ),
+                URLQueryItem(name: "geoDistance", value: "\(latitude),\(longitude),\(radiusKm)km"),
                 URLQueryItem(name: "mediaType", value: "StillImage"),
                 URLQueryItem(name: "limit", value: "\(limit)")
             ]

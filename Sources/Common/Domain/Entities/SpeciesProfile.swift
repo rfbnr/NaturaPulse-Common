@@ -11,10 +11,7 @@ public struct SpeciesProfile: Equatable {
     public let summary: String?
     public let summarySource: String?
 
-    public init(
-        summary: String?,
-        summarySource: String?
-    ) {
+    public init(summary: String?, summarySource: String?) {
         self.summary = summary
         self.summarySource = summarySource
     }

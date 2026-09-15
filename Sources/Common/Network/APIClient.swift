@@ -10,26 +10,19 @@ import Foundation
 import Alamofire
 
 protocol APIClient {
-    func request<T: Decodable>(
-        _ endpoint: Endpoint
-    ) -> AnyPublisher<T, NetworkError>
+    func request<T: Decodable>(_ endpoint: Endpoint) -> AnyPublisher<T, NetworkError>
 }
 
 final class AlamofireAPIClient: APIClient {
     private let session: Session
     private let decoder: JSONDecoder
 
-    init(
-        session: Session = .default,
-        decoder: JSONDecoder = JSONDecoder()
-    ) {
+    init(session: Session = .default, decoder: JSONDecoder = JSONDecoder()) {
         self.session = session
         self.decoder = decoder
     }
 
-    func request<T: Decodable>(
-        _ endpoint: Endpoint
-    ) -> AnyPublisher<T, NetworkError> {
+    func request<T: Decodable>(_ endpoint: Endpoint) -> AnyPublisher<T, NetworkError> {
         let urlRequest: URLRequest
         
         do {

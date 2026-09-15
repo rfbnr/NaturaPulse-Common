@@ -87,10 +87,7 @@ final class FieldGuideRepositoryImpl: FieldGuideRepository {
         do {
             let realm = try realmProvider.realm()
             try realm.write {
-                if let object = realm.object(
-                    ofType: SavedSpeciesObject.self,
-                    forPrimaryKey: id
-                ) {
+                if let object = realm.object(ofType: SavedSpeciesObject.self, forPrimaryKey: id) {
                     realm.delete(object)
                 }
             }

@@ -8,7 +8,5 @@
 import Combine
 
 public protocol WeatherRepository {
-    func context(
-        at location: Location
-    ) -> AnyPublisher<WeatherContext, AppError>
+    func context(at location: Location) -> AnyPublisher<WeatherContext, AppError>
 }

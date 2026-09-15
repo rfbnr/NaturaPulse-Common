@@ -13,12 +13,7 @@ public struct SpeciesImage: Equatable, Hashable {
     public let license: String?
     public let sourceURL: URL?
 
-    public init(
-        url: URL,
-        creator: String?,
-        license: String?,
-        sourceURL: URL?
-    ) {
+    public init(url: URL, creator: String?, license: String?, sourceURL: URL?) {
         self.url = url
         self.creator = creator
         self.license = license

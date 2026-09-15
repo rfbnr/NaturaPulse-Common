@@ -39,9 +39,7 @@ where R.Request == Request, R.Response == Response {
         self.repository = repository
     }
 
-    public func execute(
-        _ request: Request
-    ) -> AnyPublisher<Response, AppError> {
+    public func execute(_ request: Request) -> AnyPublisher<Response, AppError> {
         repository.fetch(request)
     }
 }

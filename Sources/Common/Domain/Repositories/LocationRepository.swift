@@ -8,7 +8,5 @@
 import Combine
 
 public protocol LocationRepository {
-    func searchLocations(
-        query: String
-    ) -> AnyPublisher<[Location], AppError>
+    func searchLocations(query: String) -> AnyPublisher<[Location], AppError>
 }

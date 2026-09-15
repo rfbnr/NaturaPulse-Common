@@ -13,12 +13,7 @@ public struct EmptyStateView: View {
     public let actionTitle: String?
     public let action: (() -> Void)?
 
-    public init(
-        title: String,
-        message: String,
-        actionTitle: String?,
-        action: (() -> Void)?
-    ) {
+    public init(title: String, message: String, actionTitle: String?, action: (() -> Void)?) {
         self.title = title
         self.message = message
         self.actionTitle = actionTitle

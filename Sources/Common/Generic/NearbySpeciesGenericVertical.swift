@@ -18,9 +18,7 @@ public struct NearbySpeciesRequest {
 }
 
 extension GetNearbySpeciesUseCase: UseCase {
-    public func execute(
-        _ request: NearbySpeciesRequest
-    ) -> AnyPublisher<[Species], AppError> {
+    public func execute(_ request: NearbySpeciesRequest) -> AnyPublisher<[Species], AppError> {
         callAsFunction(location: request.location, radius: request.radius)
     }
 }
@@ -32,9 +30,7 @@ public struct NearbySpeciesRepository: Repository {
         self.source = source
     }
 
-    public func fetch(
-        _ request: NearbySpeciesRequest
-    ) -> AnyPublisher<[Species], AppError> {
+    public func fetch(_ request: NearbySpeciesRequest) -> AnyPublisher<[Species], AppError> {
         source.getNearbySpecies(at: request.location, radius: request.radius)
     }
 }

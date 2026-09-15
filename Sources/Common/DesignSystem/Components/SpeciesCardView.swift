@@ -12,11 +12,7 @@ public struct SpeciesCardView: View {
     public var isSaved: Bool = false
     public var onToggleFavorite: (() -> Void)?
 
-    public init(
-        species: Species,
-        isSaved: Bool = false,
-        onToggleFavorite: (() -> Void)? = nil
-    ) {
+    public init(species: Species, isSaved: Bool = false, onToggleFavorite: (() -> Void)? = nil) {
         self.species = species
         self.isSaved = isSaved
         self.onToggleFavorite = onToggleFavorite
